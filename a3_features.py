@@ -60,8 +60,7 @@ if __name__ == "__main__":
     mailtext, authors_list =loaddata(args.inputdir)
  
 
-    print("Constructing table with {} feature dimensions and {}% test instances...".format(args.dims, args.testsize))
-
+    print("Constructing table with {} feature dimensions and {}% test instances...".format(args.dims, args.testsize)) 
 
     matrix = vectorizer.fit_transform(mailtext)
     print(matrix.toarray())
@@ -71,7 +70,7 @@ if __name__ == "__main__":
     y = authors_list
     
 
-    x_train, x_test, y_train, y_test = train_test_split(matrix, authors_list, train_size=0.8, test_size=0.2, shuffle=False)
+    x_train, x_test, y_train, y_test = train_test_split(matrix, authors_list, test_size=args.testsize/100, shuffle=True, max_features=args.dims)
 
     print(x_train)
     print(y_train)
@@ -82,7 +81,7 @@ if __name__ == "__main__":
     print("Writing to {}...".format(args.outputfile))
 
     data = [x_train, y_train, x_test, y_test]
-    with open('data.pickle', 'wb') as file:
+    with open(args.outputfile, 'wb') as file:
         pickle.dump(data, file)
         print("Saved the data")
 
