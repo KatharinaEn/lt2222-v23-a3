@@ -55,6 +55,8 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
+    vectorizer = CountVectorizer(max_features=args.dims)
+
     print("Reading {}...".format(args.inputdir)) # = ./data/enron_sample
 
     mailtext, authors_list =loaddata(args.inputdir)
