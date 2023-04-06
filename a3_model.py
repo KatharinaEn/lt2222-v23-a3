@@ -47,12 +47,13 @@ class MyDataset(Dataset):
             x = torch.tensor(self.x_train[i])
             y = torch.tensor(self.y_train[i])
             self.samples.append((x, y))
+        return pickle.load(samples)
 
-    # def __len__(self):
-    #     return len(self.samples)
+    def __len__(self):
+        return len(self.samples)
 
-    # def __getitem__(self, idx):
-    #     return self.samples[idx]
+    def __getitem__(self, idx):
+        return self.samples[idx]
 
 
 def train(model, samples, epochs=4, batch_size=4):
@@ -79,8 +80,12 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Train and test a model on features.")
     parser.add_argument("featurefile", type=str, help="The file containing the table of instances")
     args = parser.parse_args()
-    data = args.featurefile
     print("Reading {}...".format(args.featurefile))
-    print(data)
-    # file_path = os.path.abspath(data)
-    # datafile = pd.read_pickle(file_path)
+    samples = args.featurefile
+    file_path = os.path.abspath(samples)
+    datafile = pd.read_pickle(file_path)
+    with open(args.featurefile, 'rb') as file:
+        pd.read_pickle(samples, file)
+    print(samples)
+    print("Done!")
+    
