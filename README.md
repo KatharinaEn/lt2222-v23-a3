@@ -2,9 +2,9 @@
 
 Part 4 - Enron data ethics:
 
-Since the messages were written during office hours from office computers and were provided by contract to the company and were therefore the property of the company, it is understandably that these messages will be used against these people later on in court since it's the publuc property.
+Since the messages were written during office hours from office computers and were provided by contract to the company and were therefore the property of the company, it is understandably, that these messages will be used against these people later on in court since it's the public property.
 
-On the other hand, messages are always a private issue - even though they are written at an office computer (and on the office server therefore). Therefore it is difficult, to use them in public trials or similar public affairs. In addition, the email history was made public without the knowdledge of the people, however, with having made them public people were arrested because of the statements they wrote in these emails.
+On the other hand, messages are always a private issue - even though they are written at an office computer (and on the office server therefore). Therefore it is difficult, to use them in public trials or similar public affairs. In addition, the email history was made public without the knowledge of the people, however, with having made them public, people were arrested because of the statements they wrote in these emails.
 
 All in all, ethics was and became even more an important topic. Using such chat/email histories for machine training purposes and in a university context is okay I would say, because explicitly these mails are already published and public.
 
