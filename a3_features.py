@@ -72,12 +72,12 @@ if __name__ == "__main__":
     y = authors_list
     
 
-    x_train, x_test, y_train, y_test = train_test_split(matrix, authors_list, test_size=args.testsize/100, shuffle=True, max_features=args.dims)
+    x_train, x_test, y_train, y_test = train_test_split(matrix, authors_list, test_size=args.testsize/100, shuffle=True)
 
-    print(x_train)
-    print(y_train)
-    print(x_test)
-    print(y_test)
+    print(x_train.shape)
+    print(len(y_train))
+    print(x_test.shape)
+    print(len(y_test))
 
 
     print("Writing to {}...".format(args.outputfile))
