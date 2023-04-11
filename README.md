@@ -14,7 +14,7 @@ Part 5 - documentation:
 
 Please run the file for part 1 as follows: python3 a3_features.py ./data/enron_sample/ data.pickle 400 --test=20
 
-In part 1 I extracted the names of the authors, which I called Y. As well as I extracted the headers and signature lines from the emails, resulting in creating "mailtext" which equals my X. I used X (mailtext) to create the vectors. Then I used the outcome of the vectors, which I called matrix to create the train_test_split of 80/20 with sklearn method train_test_split. I then put the output of x_train, y_train, x_test, y_test into a list called "data". Finally, I used pickle.dumb to write it the data out to the args.outputfile.
+In part 1 I extracted the names of the authors, which I called Y. As well as I extracted the headers and signature lines from the emails, resulting in creating "mailtext" which equals my X. I used X (mailtext) to create the vectors. Then I used the outcome of the vectors, which I called matrix to create the train_test_split of 80/20 with sklearn method train_test_split. I then put the output of x_train, y_train, x_test, y_test into a list called "data". Finally, I used pickle.dumb to write the data out to the args.outputfile.
 
 Part 2: 
 
